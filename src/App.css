@@ -1,7 +1,16 @@
 h3{
   text-align: center;
 }
-input{
+#wish-form input{
+  display: block;
+  margin: auto;
+}
+
+label{
+  display: block;
+  text-align: center;
+}
+input[type="submit"]{
   display: block;
   margin: auto;
 }

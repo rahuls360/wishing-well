@@ -26,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <form onSubmit={this.handleWish}>
+        <form onSubmit={this.handleWish} id="wish-form">
           <h3>What is your wish</h3>
           <input type="text" name="wish" ref={this.wishRef} onChange={this.inputChanged}/>
           <input type="submit"/>
