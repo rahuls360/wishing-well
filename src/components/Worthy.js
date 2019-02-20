@@ -16,14 +16,17 @@ class Worthy extends React.Component{
     decideWorthy = (event) => {
         let clarity = false;
 
-        // console.log(this.deserveItRef.current.value);
         let specificActions = this.specficActionsRef.current.value;
 
         if(specificActions !== ""){
             clarity = true;
         }
-        console.log(this.hardWorking);
-        console.log(clarity);
+
+        if(this.hardWorking && clarity){
+            console.log("Worthy");
+        }else{
+            console.log("Not Worthy");
+        }
 
         event.preventDefault();
     }
