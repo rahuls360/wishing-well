@@ -27,6 +27,7 @@ class Worthy extends React.Component{
         }else{
             console.log("Not Worthy");
         }
+        this.props.history.push('/granting');
 
         event.preventDefault();
     }
