@@ -43,7 +43,7 @@ class App extends Component {
       <>
       <div className="container">
         <form onSubmit={this.handleWish} id="wish-form">
-          <h3>What is your wish</h3>
+          <h3>What is your wish?</h3>
           <input type="text" name="wish" ref={this.wishRef} onChange={this.inputChanged}/>
           <input type="submit"/>
         </form>
