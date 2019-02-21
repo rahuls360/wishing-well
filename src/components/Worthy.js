@@ -28,9 +28,9 @@ class Worthy extends React.Component{
         }
 
         if(this.hardWorking && this.clarity){
-            console.log("Worthy");
+            this.worthy = true;
         }else{
-            console.log("Not Worthy");
+            this.worthy = false;
         }
         // this.props.history.push('/granting');
 
@@ -45,7 +45,7 @@ class Worthy extends React.Component{
         if(this.state.formFlag){
             return <Redirect to={
                 {pathname:'granting',
-                state: {wish: this.props.location.state.wish, hardWorking: this.hardWorking, clarity: this.clarity}
+                state: {wish: this.props.location.state.wish, worthy: this.worthy, clarity: this.clarity}
         }}/>
         }
         return (
