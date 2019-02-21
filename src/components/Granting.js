@@ -26,6 +26,7 @@ class Granting extends React.Component{
             <h4>Expected time: {this.message}</h4>
             <img src={this.image} alt="reaction"/>
             {clarityMessage}
+            <a href="/">Ask for another wish</a>
             </>
         );
     }
