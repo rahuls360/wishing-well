@@ -1,6 +1,11 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom';
 
 class Worthy extends React.Component{
+    state = {
+        formFlag: false
+    }
+
     deserveItRef = React.createRef();
     specficActionsRef = React.createRef();
 
@@ -14,24 +19,35 @@ class Worthy extends React.Component{
     }
 
     decideWorthy = (event) => {
-        let clarity = false;
+        this.clarity = false;
 
         let specificActions = this.specficActionsRef.current.value;
 
         if(specificActions !== ""){
-            clarity = true;
+            this.clarity = true;
         }
 
-        if(this.hardWorking && clarity){
+        if(this.hardWorking && this.clarity){
             console.log("Worthy");
         }else{
             console.log("Not Worthy");
         }
-        this.props.history.push('/granting');
+        // this.props.history.push('/granting');
 
         event.preventDefault();
+
+        let formFlag = this.state.formFlag;
+        formFlag = true;
+        this.setState({formFlag});
+
     }
     render(){
+        if(this.state.formFlag){
+            return <Redirect to={
+                {pathname:'granting',
+                state: {wish: this.props.location.state.wish, hardWorking: this.hardWorking, clarity: this.clarity}
+        }}/>
+        }
         return (
             <form onSubmit={this.decideWorthy}>
                 <h3>Are you willing to put in the work?</h3>
