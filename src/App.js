@@ -48,6 +48,7 @@ class App extends Component {
           <input type="submit"/>
         </form>
       </div>
+      <img src="https://i.gifer.com/Hw2z.gif" alt="thinking"/>
       {redirectCode}
       </>
     );
