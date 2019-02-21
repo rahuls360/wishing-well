@@ -21,3 +21,8 @@ body{
   letter-spacing: 1px;
   background: darksalmon;
 }
+
+img{
+  display: block;
+  margin: auto;
+}
