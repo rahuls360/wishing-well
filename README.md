@@ -15,4 +15,5 @@ Ask for anything you wish for. The ${whateverYouBelieveIn} will ask you certain 
 
 1. Passing props using Redirect Component (from react-router-dom)
 2. Conditional Rendering in ReactJS
-3. problemSolvingSkills += 5;
+3. Deploying create-react-app to Heroku (using Heroku Buildpack)
+4. problemSolvingSkills += 5;
